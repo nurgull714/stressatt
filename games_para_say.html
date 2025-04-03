@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Para Sayma</title>
+</head>
+<body>
+    <h1>Hızlıca Para Say!</h1>
+    <button onclick="countMoney()">Say</button>
+    <p id="money">0 TL</p>
+
+    <script>
+        let total = 0;
+        function countMoney() {
+            total += 10;
+            document.getElementById("money").innerText = total + " TL";
+        }
+    </script>
+</body>
+</html>

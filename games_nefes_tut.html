@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Nefes Tutma Oyunu</title>
+</head>
+<body>
+    <h1>Nefesini Mümkün Olduğunca Tut!</h1>
+    <button onclick="startTimer()">Başla</button>
+    <p id="timer">0 saniye</p>
+
+    <script>
+        let startTime;
+        function startTimer() {
+            startTime = new Date();
+            document.getElementById("timer").innerText = "Zaman Başladı!";
+        }
+
+        document.body.onkeyup = function(event) {
+            let elapsed = Math.floor((new Date() - startTime) / 1000);
+            document.getElementById("timer").innerText = `Süre: ${elapsed} saniye`;
+        };
+    </script>
+</body>
+</html>
